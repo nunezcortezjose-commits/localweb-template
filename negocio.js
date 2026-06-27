@@ -14,7 +14,7 @@ info: "⭐ 4.9 (327 reseñas) • 📍 Magdalena, Jal.",
 
 detalles: "🌮 Tacos al carbón • 🚚 Para llevar • 🔥 Hechos al momento",
     telefono: "523312345678",
-
+  url: "https://nunezcortezjose-commits.github.io/localweb-template/",
     whatsapp:
         "https://wa.me/523312345678?text=Hola,%20quiero%20hacer%20un%20pedido",
 

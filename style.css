@@ -145,6 +145,12 @@ border-top:6px solid var(--color-principal);
 /* ==========================
    PRODUCTOS
 ========================== */
+
+.menu{
+
+margin-top:10px;
+
+}
 .categoria{
 
     color:var(--color-principal);
@@ -340,5 +346,101 @@ box-shadow .2s;
     line-height:1.6;
 
     text-align:center;
+
+}
+
+
+#qrcode{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:20px;
+
+}
+
+#qrcode img{
+
+border-radius:12px;
+
+background:white;
+
+padding:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+/* ==========================
+   TARJETA QR
+========================== */
+
+.qr-card{
+
+    text-align:center;
+
+}
+
+#qrcode{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:25px 0;
+
+}
+
+#qrcode img{
+
+    background:white;
+
+    padding:14px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+
+}
+
+.qr-text{
+
+    color:#666;
+
+    line-height:1.6;
+
+    margin-top:10px;
+
+}
+
+.qr-footer{
+
+    margin-top:18px;
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+.qr-badge{
+
+    display:inline-block;
+
+    margin:18px auto;
+
+    padding:8px 18px;
+
+    background:var(--color-principal);
+
+    color:white;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
 
 }

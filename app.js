@@ -228,6 +228,42 @@ function crearWhatsApp() {
     `;
 
 }
+
+function crearQR() {
+
+    return `
+
+    <div class="container">
+
+        <div class="card qr-card">
+
+            <h2>📱 Escanea el menú</h2>
+          <div class="qr-badge">
+
+✨ Comparte fácilmente
+
+</div>
+            <p class="qr-text">
+
+                Escanea este código para abrir el menú desde cualquier celular.
+
+            </p>
+
+            <div id="qrcode"></div>
+
+            <p class="qr-footer">
+
+                📍 Ideal para mesas, mostrador o publicaciones en redes.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    `;
+
+}
 // =========================
 // MOSTRAR LA PÁGINA
 // =========================
@@ -241,5 +277,18 @@ app.innerHTML =
     crearHorario() +
 
     crearUbicacion() +
-
+    
+    crearQR() +
+  
     crearWhatsApp();
+    
+    
+    new QRCode(document.getElementById("qrcode"),{
+
+    text: negocio.url,
+
+    width: 180,
+
+    height: 180
+
+});
