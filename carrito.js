@@ -336,6 +336,5 @@ ${comentarios}
 
     const url =
 `${negocio.whatsapp}?text=${encodeURIComponent(mensaje)}`;
-alert(url);
 window.location.href = url;
 }
