@@ -116,13 +116,26 @@ function crearMenu() {
                         ${producto.descripcion}
                     </p>
 
-                    <div class="footer-producto">
+  
+
+    <div class="footer-producto">
 
     <div class="precio">
+
         ${producto.precio}
+
     </div>
 
+    <button
+        class="agregar"
+        onclick="agregarProducto(${producto.id})">
+
+        Agregar
+
+    </button>
+
 </div>
+
 
                 </div>
 
@@ -143,6 +156,22 @@ function crearMenu() {
 
 }
 
+function crearBotonCarrito(){
+
+    return `
+
+    <div
+        id="boton-carrito"
+        class="boton-carrito oculto"
+        onclick="abrirPedido()">
+
+        🛒 0 productos • $0
+
+    </div>
+
+    `;
+
+}
 // =========================
 // HORARIO
 // =========================
@@ -229,6 +258,101 @@ function crearWhatsApp() {
 
 }
 
+function crearModalPedido(){
+
+    return `
+
+    <div id="pedido-modal" class="pedido-modal">
+
+        <div class="pedido-sheet">
+
+            <div class="pedido-header">
+
+                <h2>🛒 Tu pedido</h2>
+
+                <button
+                    class="cerrar-modal"
+                    onclick="cerrarPedido()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div id="pedido-contenido">
+
+                <!-- Aquí aparecerán los productos -->
+
+            </div>
+  <div id="pedido-formulario" style="display:none;">
+<button
+class="volver-pedido"
+onclick="volverPedido()">
+
+← Volver al pedido
+
+</button>
+<h3>Datos del pedido</h3>
+
+<input
+id="cliente-nombre"
+class="input-pedido"
+type="text"
+placeholder="Nombre">
+
+<select
+id="tipo-servicio"
+class="input-pedido"
+onchange="cambiarTipoServicio()">
+
+<option value="Comer aquí">
+Comer aquí
+</option>
+
+<option value="Recoger">
+Recoger
+</option>
+
+<option value="Domicilio">
+Domicilio
+</option>
+
+</select>
+
+<textarea
+id="cliente-direccion"
+class="input-pedido"
+placeholder="Dirección"
+style="display:none;"></textarea>
+
+<textarea
+id="cliente-comentarios"
+class="input-pedido"
+placeholder="Comentarios (opcional)"></textarea>
+
+</div>
+            <div class="pedido-footer">
+
+                <button
+                id="continuar-pedido"
+               class="continuar"
+                onclick="accionPedido()">
+
+                  Continuar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    `;
+
+}
+
 function crearQR() {
 
     return `
@@ -264,6 +388,8 @@ function crearQR() {
     `;
 
 }
+
+
 // =========================
 // MOSTRAR LA PÁGINA
 // =========================
@@ -280,8 +406,11 @@ app.innerHTML =
     
     crearQR() +
   
-    crearWhatsApp();
+    crearModalPedido() +
+  
+    crearWhatsApp()+
     
+    crearBotonCarrito();
     
     new QRCode(document.getElementById("qrcode"),{
 

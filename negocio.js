@@ -16,7 +16,7 @@ detalles: "🌮 Tacos al carbón • 🚚 Para llevar • 🔥 Hechos al momento
     telefono: "523344115697",
   url: "https://nunezcortezjose-commits.github.io/localweb-template/",
     whatsapp:
-        "https://wa.me/523344115697?text=Hola,%20quiero%20hacer%20un%20pedido",
+"https://wa.me/523344115697",
 
     direccion: "Calle Hidalgo #125, Magdalena, Jalisco",
 
@@ -40,6 +40,7 @@ botonMaps: "📍 Cómo llegar",
     productos: [
 
     {
+      id:0,
         categoria: "🌮 Tacos",
         nombre: "Taco al Pastor",
         descripcion: "Carne marinada y piña.",
@@ -48,6 +49,7 @@ botonMaps: "📍 Cómo llegar",
     },
 
     {
+      id:1,
         categoria: "🌮 Tacos",
         nombre: "Taco de Asada",
         descripcion: "Carne asada preparada al momento.",
@@ -56,6 +58,7 @@ botonMaps: "📍 Cómo llegar",
     },
 
     {
+      id:2,
         categoria: "🥤 Bebidas",
         nombre: "Agua de Jamaica",
         descripcion: "Natural y fresca.",
@@ -64,6 +67,7 @@ botonMaps: "📍 Cómo llegar",
     },
 
     {
+      id:3,
         categoria: "🍰 Postres",
         nombre: "Flan Casero",
         descripcion: "Preparado diariamente.",
