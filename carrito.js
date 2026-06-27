@@ -285,36 +285,47 @@ function enviarPedido(){
         document.getElementById("cliente-comentarios").value.trim();
 
     let mensaje =
-`Hola 👋
+`🍔 Pedido para ${negocio.nombre}
 
-Quiero realizar el siguiente pedido:
+👋 ¡Hola!
+
+Quisiera realizar el siguiente pedido:
+
+━━━━━━━━━━━━━━
 
 `;
 
     pedido.forEach(item=>{
 
-        mensaje +=
-
-`${item.nombre} x${item.cantidad} — $${item.precio*item.cantidad}
+    mensaje +=
+`🌮 ${item.nombre} ×${item.cantidad}
+      $${item.precio * item.cantidad}
 
 `;
 
-    });
+});
 
     mensaje +=
+`━━━━━━━━━━━━━━
 
-`Total: $${calcularTotal()}
+💰 *Total: $${calcularTotal()}*
 
-Nombre: ${nombre}
+━━━━━━━━━━━━━━
 
-Tipo de servicio: ${tipo}
+📋 DATOS DEL PEDIDO
+
+👤 Cliente:
+${nombre}
+
+🚚 Servicio:
+${tipo}
+
 `;
 
     if(tipo==="Domicilio"){
 
         mensaje +=
-
-`Dirección:
+`📍 Dirección:
 ${direccion}
 
 `;
@@ -324,15 +335,17 @@ ${direccion}
     if(comentarios!==""){
 
         mensaje +=
-
-`Comentarios:
+`📝 Comentarios:
 ${comentarios}
 
 `;
 
     }
 
-    mensaje += "Gracias.";
+    mensaje +=
+`━━━━━━━━━━━━━━
+
+¡Gracias! 😊`;
 
     const url =
 `${negocio.whatsapp}?text=${encodeURIComponent(mensaje)}`;
