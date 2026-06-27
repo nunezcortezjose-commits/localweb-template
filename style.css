@@ -1,0 +1,344 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#F8F9FA;
+    color:var(--color-principal);
+    padding-bottom:90px;
+}
+
+:root{
+
+    --color-principal:#25D366;
+
+}
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.container{
+    width:95%;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ==========================
+   ENCABEZADO
+========================== */
+
+.header{
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f8f8f8 100%
+    );
+
+    border-radius:24px;
+
+    padding:30px 24px;
+
+    text-align:center;
+
+    margin:20px 0;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+border-top:6px solid var(--color-principal);
+}
+
+.logo{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    margin-bottom:18px;
+
+}
+
+.header h1{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+.slogan{
+
+    color:#666;
+
+    font-size:16px;
+
+    margin-bottom:18px;
+
+}
+
+.mensaje{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    background:#E8F5E9;
+
+    color:#2E7D32;
+
+}
+
+.hero-info{
+
+    margin-top:30px;
+    margin-bottom:20px;
+    color:#666;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+/* ==========================
+   TARJETAS
+========================== */
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+/* ==========================
+   PRODUCTOS
+========================== */
+.categoria{
+
+    color:var(--color-principal);
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin:40px 0 20px;
+
+    padding-bottom:10px;
+
+    border-bottom:3px solid #ECECEC;
+
+}
+.producto{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px;
+
+    margin:18px 0;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+    transition:
+transform .2s,
+box-shadow .2s;
+
+}
+
+.producto:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.12);
+
+}
+.producto img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:transform .3s;
+
+}
+
+.producto:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    flex:1;
+
+}
+
+.info h3{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+    color:#222;
+
+}
+
+.descripcion{
+
+    color:#777;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+    margin-bottom:14px;
+
+}
+
+.precio{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:var(--color-principal);
+
+}
+
+.footer-producto{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* ==========================
+   BOTONES
+========================== */
+
+.boton{
+    display:block;
+    text-align:center;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* ==========================
+   QR
+========================== */
+
+.qr{
+    display:block;
+    width:220px;
+    max-width:100%;
+    margin:20px auto;
+}
+
+/* ==========================
+   WHATSAPP FLOTANTE
+========================== */
+
+.whatsapp-fijo{
+
+    position:fixed;
+  width:calc(100% - 32px);
+
+    left:16px;
+
+    right:16px;
+
+    bottom:18px;
+
+    text-align:center;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+}
+
+
+ 
+.hero-detalles{
+
+    margin-top:10px;
+
+    color:#888;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    text-align:center;
+
+}
