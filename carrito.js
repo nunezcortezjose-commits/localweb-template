@@ -263,7 +263,43 @@ function accionPedido(){
 
 }
 
+function generarNumeroPedido(){
+
+    let numero =
+        Number(localStorage.getItem("pedidoNumero")) || 0;
+
+    numero++;
+
+    localStorage.setItem("pedidoNumero", numero);
+
+    return String(numero).padStart(3,"0");
+
+}
+
+function obtenerFechaHora(){
+
+    const ahora = new Date();
+
+    return ahora.toLocaleString("es-MX",{
+
+        day:"2-digit",
+
+        month:"2-digit",
+
+        year:"numeric",
+
+        hour:"2-digit",
+
+        minute:"2-digit"
+
+    });
+
+}
+
 function enviarPedido(){
+  const numeroPedido = generarNumeroPedido();
+
+const fechaHora = obtenerFechaHora();
     const nombre =
         document.getElementById("cliente-nombre").value.trim();
 
@@ -285,41 +321,40 @@ function enviarPedido(){
         document.getElementById("cliente-comentarios").value.trim();
 
     let mensaje =
-`🍔 Pedido para ${negocio.nombre}
+`🔔 *NUEVO PEDIDO* #${numeroPedido}
 
-👋 ¡Hola!
+🍔 ${negocio.nombre}
 
-Quisiera realizar el siguiente pedido:
+🕒 ${fechaHora}
 
 ━━━━━━━━━━━━━━
+
+🍽 *PEDIDO*
 
 `;
 
     pedido.forEach(item=>{
 
     mensaje +=
-`🌮 ${item.nombre} ×${item.cantidad}
-      $${item.precio * item.cantidad}
-
+`🌮 ${item.nombre} ×${item.cantidad} — $${item.precio*item.cantidad}
 `;
 
 });
 
     mensaje +=
-`━━━━━━━━━━━━━━
 
-💰 *Total: $${calcularTotal()}*
-
+`
 ━━━━━━━━━━━━━━
 
-📋 DATOS DEL PEDIDO
+💰 *TOTAL: $${calcularTotal()}*
 
-👤 Cliente:
-${nombre}
+`;
 
-🚚 Servicio:
-${tipo}
+mensaje +=
 
+`
+👤 ${nombre}
+🚚 ${tipo}
 `;
 
     if(tipo==="Domicilio"){
