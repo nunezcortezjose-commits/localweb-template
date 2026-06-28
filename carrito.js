@@ -95,6 +95,7 @@ function cantidadProductos(){
 function actualizarCarrito(){
 
     const boton = document.getElementById("boton-carrito");
+    const botonWhatsApp = document.getElementById("boton-whatsapp");
 
     if(!boton) return;
 
@@ -102,15 +103,46 @@ function actualizarCarrito(){
 
         boton.classList.add("oculto");
 
+        if(botonWhatsApp){
+
+            botonWhatsApp.innerHTML = "💬 Consultar";
+
+            botonWhatsApp.href =
+            `${negocio.whatsapp}?text=${encodeURIComponent(
+            "Hola 👋\n\nVi su menú en LocalWeb y tengo una consulta."
+            )}`;
+
+            botonWhatsApp.target = "_blank";
+
+            botonWhatsApp.onclick = null;
+
+        }
+
         return;
 
     }
 
     boton.classList.remove("oculto");
 
-    boton.innerHTML=
-
+    boton.innerHTML =
     `🛒 ${cantidadProductos()} productos • $${calcularTotal()} · Ver pedido`;
+
+    if(botonWhatsApp){
+
+        botonWhatsApp.innerHTML =
+        `🛒 Finalizar pedido (${cantidadProductos()})`;
+
+        botonWhatsApp.removeAttribute("href");
+
+        botonWhatsApp.onclick = function(e){
+
+            e.preventDefault();
+
+            abrirPedido();
+
+        };
+
+    }
 
 }
 

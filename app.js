@@ -245,6 +245,7 @@ function crearWhatsApp() {
     return `
 
     <a
+        id="boton-whatsapp"
         class="whatsapp-fijo"
         href="${negocio.whatsapp}"
         target="_blank"
@@ -389,7 +390,19 @@ function crearQR() {
 
 }
 
+function consultarWhatsApp(){
 
+    const mensaje =
+`Hola 👋
+
+Vi su menú en LocalWeb y tengo una consulta.`;
+
+    const url =
+`${negocio.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+
+    window.location.href = url;
+
+}
 // =========================
 // MOSTRAR LA PÁGINA
 // =========================
@@ -411,6 +424,8 @@ app.innerHTML =
     crearWhatsApp()+
     
     crearBotonCarrito();
+    
+    actualizarCarrito();
     
     new QRCode(document.getElementById("qrcode"),{
 
