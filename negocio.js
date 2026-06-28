@@ -13,10 +13,10 @@ ciudad: "Magdalena, Jal.",
 info: "⭐ 4.9 (327 reseñas) • 📍 Magdalena, Jal.",
 
 detalles: "🌮 Tacos al carbón • 🚚 Para llevar • 🔥 Hechos al momento",
-    telefono: "523344115697",
+    telefono: "528142221102",
   url: "https://nunezcortezjose-commits.github.io/localweb-template/",
     whatsapp:
-"https://wa.me/523344115697",
+"https://wa.me/528142221102",
 
     direccion: "Calle Hidalgo #125, Magdalena, Jalisco",
 
